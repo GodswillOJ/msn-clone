@@ -2,20 +2,182 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* General Container */
+body{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to top left, rgb(218, 215, 205) 0%, rgb(202, 224, 225) 50%, rgb(248, 203, 185) 100%);
+  height: 100vh; /* Example to show the full viewport height */
+  width: 100%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.app_msn{
+  background: linear-gradient(to top left, rgb(218, 215, 205) 0%, rgb(202, 224, 225) 50%, rgb(248, 203, 185) 100%);
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.signin-container {
+  padding: 20px;
+  max-width: 500px;
+  margin: auto;
+  border-radius: 8px;
+}
+
+/* Block Container */
+.signin-block {
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;  background-color: #fff;
+  padding: 2rem;
+}
+
+/* Logo */
+.logo-container {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.logo {
+  max-width: 100%;
+}
+
+/* Form */
+.signin-form {
+  display: block;
+}
+
+.signin-label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #1b1b1b;
+}
+
+.signin-input {
+  width: 100%;
+  padding-bottom: 4px;
+  border: none;
+  border-bottom: 1px solid #000;
+  outline: none;
+  margin-bottom: 20px;
+}
+
+/* Account Info */
+.account-info {
+  display: flex;
+  /* justify-content: space-between; */
+  margin-bottom: 10px;
+}
+.account-info p {
+  font-size: 0.812rem;
+}
+
+.create-account-link {
+  color: #0067b8;
+  text-decoration: none;
+  font-size: 0.812rem;
+  padding-left: 10px;
+}
+
+/* Can't Access Account */
+.access-account-link {
+  display: block;
+  color: #0067b8;
+  text-decoration: none;
+  font-size: 0.812rem;
+  margin-bottom: 10px;
+}
+
+.access-email-link {
+  display: block;
+  color: #0067b8;
+  text-decoration: none;
+  font-size: 0.812rem;
+  margin-bottom: 10px;
+}
+
+.access-microsoft_account-link{
+  display: block;
+  color: #0067b8;
+  font-size: 0.812rem;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.create-account-link:hover, .access-account-link:hover {
+  color: #626262;
+  text-decoration: underline;
+}
+
+
+/* Sign-in Button */
+.signin-button {
+  display: block;
+  width: 30%;
+  padding: 5px;
+  background-color: #3080bc;
+  color: #fff;
+  justify-self: end;
+  border: none;
+  cursor: pointer;
+}
+
+.signin-button:hover{
+  background-color: #0067b8;
+}
+/* Sign-in Options */
+.signin-options {
+  display: flex;
+  justify-content: start;
+  padding-left: 30px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  align-items: center;
+}
+
+.signin-options:hover {
+  background-color: #e6e6e6;   
+}
+
+.signin-options:active {
+  background-color: #e6e6e6; 
+  border-color: #000; 
+  border: 1px dashed #000; 
+}
+
+.signin-options-link {
+  text-decoration: none;
+  color: #000;
+}
+
+.signin-options-button {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #000;
+}
+
+.key-icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+}
+
+.signin-options-text {
+  margin: 0;
+}
+
+/* error styles */
+.error-text {
+  color: #e81123;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.signin-input.error {
+  border-bottom: 1px solid red;
 }
